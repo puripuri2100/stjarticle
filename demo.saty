@@ -1,0 +1,34 @@
+@import: stjarticle
+%@require: stdjabook
+@require: code
+@require: itemize
+@require: tabular
+@require: proof
+@require: hdecoset
+@require: vdecoset
+
+
+document (|
+  title = {テスト};
+  author = {puripuri2100};
+  date = {2018/05/12};
+  show-title = true;
+  show-toc = true;
+  show-footer = true;
+  show-header  = true;
+  show-footer = false;
+  show-header = false;
+%  show-title-deco = true;
+|) '<
++part{test}<
+ +chapter{test}<
+ +section{test}<
+  +subsection{test}<
+   +subsubsection{test}<
+   +p{\textgt{テスト}\textmc{テスト}}
+     >
+    > 
+   >
+  >
+ >
+>
