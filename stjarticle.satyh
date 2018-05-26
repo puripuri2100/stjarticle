@@ -44,7 +44,7 @@ module StdJaBook : sig
   direct +subsubsection : [string?;inline-text;block-text]block-cmd
   direct \textgt : [inline-text] inline-cmd
   direct \textmc : [inline-text] inline-cmd
-  direct \text-large : [inline-text] inline-cmd
+%  direct \text-large : [inline-text] inline-cmd
 
 end = struct
 
@@ -715,12 +715,12 @@ let-inline ctx \textmc it =
   in
   read-inline ctxm it
 
- let-inline ctx \text-large inner =
-  let font = (`ipaexm`, 0.88, 0.) in
-  let ctxg =
-    ctx |> set-font Kana font |> set-font HanIdeographic font
-  in
-  read-inline ctxg it
+% let-inline ctx \text-large inner =
+%  let font = (`ipaexm`, 0.88, 0.) in
+%  let ctxg =
+%    ctx |> set-font Kana font |> set-font HanIdeographic font
+%  in
+%  read-inline ctxg it
   
 end
 
