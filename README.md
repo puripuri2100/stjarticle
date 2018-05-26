@@ -8,9 +8,9 @@ SATySFiの最初の*st*を、Japanの*j*を、そして*article*をあわせて*
 # ちょっとした説明
 SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、少し機能が足りないと感じましたので追加しました。
 
-# 機能説明
+# コマンド説明
 
-## 前からあった機能
+## 前からあったコマンド
 `stdjabook.satyh`等に最初からあったコマンド等で、残したものを説明します。
 
 
@@ -25,3 +25,9 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - `+pn`（行頭インデントのない段落を書くのにしようします。）
 - `+section`（節です）
 - `+subsectioon`（小節です）
+
+## 追加したコマンド
+`stdjabook.satyh`等にはなく、`stjarticle.satyh`になって追加したコマンドです。
+
+
+- `date`（inline-textです。最初のdocumentの部分で指定します。名前の通り、文書の作成日付を書きます。）
