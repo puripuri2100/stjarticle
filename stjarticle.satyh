@@ -88,7 +88,7 @@ end = struct
       read-inline ctx it
 
 
-  let font-size-normalsize  = 10pt
+  let font-size-normal  = 10pt
   let font-size-title   = 34pt
   let font-size-author  = 16pt
   let font-size-date = 16pt
@@ -97,6 +97,7 @@ end = struct
   let font-size-section = 18pt
   let font-size-subsection = 16pt
   let font-size-subsubsection = 14pt
+  let font-size-normalsize  = 10pt
   let font-size-large = 12pt
   let font-size-Large = 14.4pt
   let font-size-LARGE = 17.28pt
