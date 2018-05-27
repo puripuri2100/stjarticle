@@ -1,6 +1,6 @@
 # Summary of stjarticle
 
-`stjarticle` is [SATySFi](https://github.com/gfngfn/SATySFi)'s package.
+`stjarticle.satyh` is [SATySFi](https://github.com/gfngfn/SATySFi)'s package.
 
 # 名前の由来
 SATySFiの最初の*st*を、Japaneseの*j*を、そして*article*をあわせて*stjarticle*です。
