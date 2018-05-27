@@ -11,7 +11,7 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 
 # コマンド説明
 
-## 前からあったコマンド
+## 前からあったコマンドとか
 `stdjabook.satyh`等に最初からあったコマンド等で、残したものを説明します。
 
 
@@ -27,7 +27,7 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - `+section`（節です。）
 - `+subsectioon`（小節です。）
 
-## 追加したコマンド
+## 追加したコマンドとか
 `stdjabook.satyh`等にはなく、`stjarticle.satyh`になって追加したコマンドです。
 
 
@@ -47,11 +47,11 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - `\text-LARGE`（inline-textを入れると大きさを17.28ptにして出力する。）
 - `\text-huge`（inline-textを入れると大きさを20.74ptにして出力する。）
 - `\text-Huge`（inline-textを入れると大きさを24.88ptにして出力する。）
+- `+p`と`+pn`のフォントサイズを`font-size-normal`になるように変更
 
 ## 今後追加したいコマンドとか
 - `show-title-deco`（最初のdocumentの部分で、title-decoを表示するか否かを選択できるようにしたい。）
 - `\text-small` （フォントサイズ）
-- `+p`と`+pn`のフォントサイズを`font-size-normal`にする（現状そうなっていない（謎））。
 - demoの充実化
 ## 削除したコマンド
 ### `stdjabook.satyh`から削除したコマンド
