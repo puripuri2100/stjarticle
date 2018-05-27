@@ -15,9 +15,7 @@ document (|
   show-title = true;
   show-toc = true;
   show-footer = true;
-  show-header  = true;
-  show-footer = false;
-  show-header = false;
+  show-header  = false;
 %  show-title-deco = true;
 |) '<
 +part{test}<
