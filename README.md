@@ -40,7 +40,7 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - `\textgt`（inline-textを入れてください。ゴチック体にします。）
 - `\textmc`（inline-textを入れてください。明朝体にします。）
 
-バージョン1.2以降
+バージョン1.1以降
 - `\text-normalsize`（inline-textを入れると大きさを10ptにして出力する。）
 - `\text-large`（inline-textを入れると大きさを12ptにして出力する。）
 - `\text-Large`（inline-textを入れると大きさを14.4ptにして出力する。）
