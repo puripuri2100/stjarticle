@@ -554,7 +554,11 @@ let title-deco =
         let () = needs-indentation-ref <- true in
           false
     in
-    let ib-inner = read-inline ctx inner in
+    let ib-inner = 
+        let ctx-normal = 
+        ctx |> set-font-size font-size-normal
+    in
+    read-inline ctx-normal inner in
     let br-parag =
       if needs-indentation then
         (quad-indent ctx) ++ ib-inner ++ inline-fil
@@ -566,7 +570,11 @@ let title-deco =
 
   let-block ctx +pn inner =
     let () = needs-indentation-ref <- true in
-    let ib-inner = read-inline ctx inner in
+    let ib-inner = 
+        let ctx-normal = 
+        ctx |> set-font-size font-size-normal
+    in
+    read-inline ctx-normal inner in
       form-paragraph ctx (ib-inner ++ inline-fil)
 
   let part-scheme ctx label title inner =
