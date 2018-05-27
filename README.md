@@ -55,6 +55,10 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 
 ## 今後追加したいコマンドとか
 - `show-title-deco`（最初のdocumentの部分で、title-decoを表示するか否かを選択できるようにしたい。）
+- titleがあるページにはheaderが無いようにする
+- 目次部分のデザイン変更
+- 右寄せ・左寄せ・センタリング
+- 参考文献
 - demoの充実化
 ## 削除したコマンド
 ### `stdjabook.satyh`から削除したコマンド
