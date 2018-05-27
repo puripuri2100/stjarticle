@@ -43,7 +43,7 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 
 ## 今後追加したいコマンド
 - `show-title-deco`（最初のdocumentの部分で、title-decoを表示するか否かを選択できるようにしたい。）
-
+- `\text-Large` （フォントサイズ）
 ## 削除したコマンド
 ### `stdjabook.satyh`から削除したコマンド
 
