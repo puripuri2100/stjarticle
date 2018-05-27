@@ -41,6 +41,10 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - `\textmc`（inline-textを入れてください。明朝体にします。）
 
 バージョン1.1以降
+- `\text-tiny`（inline-textを入れると大きさを5ptにして出力する。）
+- `\text-scriptsize`（inline-textを入れると大きさを7ptにして出力する。）
+- `\text-footnotesize`（inline-textを入れると大きさを8ptにして出力する。）
+- `\text-small`（inline-textを入れると大きさを9ptにして出力する。）
 - `\text-normalsize`（inline-textを入れると大きさを10ptにして出力する。）
 - `\text-large`（inline-textを入れると大きさを12ptにして出力する。）
 - `\text-Large`（inline-textを入れると大きさを14.4ptにして出力する。）
@@ -51,7 +55,6 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 
 ## 今後追加したいコマンドとか
 - `show-title-deco`（最初のdocumentの部分で、title-decoを表示するか否かを選択できるようにしたい。）
-- `\text-small` （フォントサイズ）
 - demoの充実化
 ## 削除したコマンド
 ### `stdjabook.satyh`から削除したコマンド

@@ -44,6 +44,10 @@ module StdJaBook : sig
   direct +subsubsection : [string?;inline-text;block-text]block-cmd
   direct \textgt : [inline-text] inline-cmd
   direct \textmc : [inline-text] inline-cmd
+  direct \text-tiny : [inline-text] inline-cmd
+  direct \text-scriptsize : [inline-text] inline-cmd
+  direct \text-footnotesize : [inline-text] inline-cmd
+  direct \text-small : [inline-text] inline-cmd
   direct \text-normalsize : [inline-text] inline-cmd
   direct \text-large : [inline-text] inline-cmd
   direct \text-Large : [inline-text] inline-cmd
@@ -97,6 +101,10 @@ end = struct
   let font-size-section = 18pt
   let font-size-subsection = 16pt
   let font-size-subsubsection = 14pt
+  let font-size-tiny = 5pt
+  let font-size-scriptsize = 7pt
+  let font-size-footnotesize = 8pt
+  let font-size-small = 9pt
   let font-size-normalsize  = 10pt
   let font-size-large = 12pt
   let font-size-Large = 14.4pt
@@ -735,6 +743,30 @@ let-inline ctx \textmc it =
   in
   read-inline ctxm it
   
+let-inline ctx \text-tiny inner =
+ let ctx-tiny = 
+    ctx |> set-font-size font-size-tiny
+in
+read-inline ctx-tiny inner
+
+let-inline ctx \text-scriptsize inner =
+ let ctx-scriptsize = 
+    ctx |> set-font-size font-size-scriptsize
+in
+read-inline ctx-scriptsize inner
+
+let-inline ctx \text-footnotesize inner =
+ let ctx-footnotesize = 
+    ctx |> set-font-size font-size-footnotesize
+in
+read-inline ctx-footnotesize inner
+
+let-inline ctx \text-small inner =
+ let ctx-small = 
+    ctx |> set-font-size font-size-small
+in
+read-inline ctx-small inner
+
  let-inline ctx \text-normalsize inner =
  let ctx-normalsize = 
     ctx |> set-font-size font-size-normalsize
