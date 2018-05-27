@@ -39,11 +39,17 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - `+subsubsection`（小々節ですが、目次には表示されません。）
 - `\textgt`（inline-textを入れてください。ゴチック体にします。）
 - `\textmc`（inline-textを入れてください。明朝体にします。）
-- `\text-large`（inline-textを入れると大きさを14.4ptにして出力する。）
+- `\text-normalsize`（inline-textを入れると大きさを10ptにして出力する。）
+- `\text-large`（inline-textを入れると大きさを12ptにして出力する。）
+- `\text-Large`（inline-textを入れると大きさを14.4ptにして出力する。）
+- `\text-LARGE`（inline-textを入れると大きさを12ptにして出力する。）
+- `\text-huge`（inline-textを入れると大きさを12ptにして出力する。）
+- `\text-Huge`（inline-textを入れると大きさを12ptにして出力する。）
 
 ## 今後追加したいコマンド
 - `show-title-deco`（最初のdocumentの部分で、title-decoを表示するか否かを選択できるようにしたい。）
-- `\text-Large` （フォントサイズ）
+- `\text-small` （フォントサイズ）
+- `+p`と`+pn`のフォントサイズを`font-size-normalsize`にする（現状そうなっていない（謎））。
 ## 削除したコマンド
 ### `stdjabook.satyh`から削除したコマンド
 

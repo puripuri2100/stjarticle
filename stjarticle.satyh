@@ -44,10 +44,12 @@ module StdJaBook : sig
   direct +subsubsection : [string?;inline-text;block-text]block-cmd
   direct \textgt : [inline-text] inline-cmd
   direct \textmc : [inline-text] inline-cmd
+  direct \text-normalsize : [inline-text] inline-cmd
   direct \text-large : [inline-text] inline-cmd
   direct \text-Large : [inline-text] inline-cmd
   direct \text-LARGE : [inline-text] inline-cmd
   direct \text-huge : [inline-text] inline-cmd
+  direct \text-Huge : [inline-text] inline-cmd
 
 end = struct
 
@@ -86,7 +88,7 @@ end = struct
       read-inline ctx it
 
 
-  let font-size-normal  = 10pt
+  let font-size-normalsize  = 10pt
   let font-size-title   = 34pt
   let font-size-author  = 16pt
   let font-size-date = 16pt
@@ -723,6 +725,12 @@ let-inline ctx \textmc it =
     ctx |> set-font Kana font |> set-font HanIdeographic font
   in
   read-inline ctxm it
+  
+ let-inline ctx \text-normalsize inner =
+ let ctx-normalsize = 
+    ctx |> set-font-size font-size-normalsize
+in
+read-inline ctx-normalsize inner
 
  let-inline ctx \text-large inner =
  let ctx-large = 
@@ -747,6 +755,12 @@ let-inline ctx \text-huge inner =
     ctx |> set-font-size font-size-huge
 in
 read-inline ctx-huge inner
+
+let-inline ctx \text-Huge inner =
+ let ctx-Huge = 
+    ctx |> set-font-size font-size-Huge
+in
+read-inline ctx-Huge inner
 
 end
 

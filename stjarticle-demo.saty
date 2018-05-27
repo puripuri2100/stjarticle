@@ -23,7 +23,7 @@ document (|
  +section{test}<
   +subsection{test}<
    +subsubsection{test}<
-   +p{\textgt{テスト}\textmc{テスト} \text-large{テスト\text-huge{テスト}}}
+   +p{\textgt{テスト}\textmc{テスト} \text-large{テスト\text-Huge{テスト}}\text-Large{テスト}\text-LARGE{テスト}}
      >
     > 
    >
