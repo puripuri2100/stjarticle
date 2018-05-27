@@ -45,6 +45,9 @@ module StdJaBook : sig
   direct \textgt : [inline-text] inline-cmd
   direct \textmc : [inline-text] inline-cmd
   direct \text-large : [inline-text] inline-cmd
+  direct \text-Large : [inline-text] inline-cmd
+  direct \text-LARGE : [inline-text] inline-cmd
+  direct \text-huge : [inline-text] inline-cmd
 
 end = struct
 
@@ -83,7 +86,7 @@ end = struct
       read-inline ctx it
 
 
-  let font-size-normal  = 12pt
+  let font-size-normal  = 10pt
   let font-size-title   = 34pt
   let font-size-author  = 16pt
   let font-size-date = 16pt
@@ -92,7 +95,12 @@ end = struct
   let font-size-section = 18pt
   let font-size-subsection = 16pt
   let font-size-subsubsection = 14pt
-  let font-size-large = 14.4pt
+  let font-size-large = 12pt
+  let font-size-Large = 14.4pt
+  let font-size-LARGE = 17.28pt
+  let font-size-huge = 20.74pt
+  let font-size-Huge = 24.88pt
+  
 
   let section-top-margin = 20pt
   let section-bottom-margin = 12pt
@@ -721,6 +729,24 @@ let-inline ctx \textmc it =
     ctx |> set-font-size font-size-large
 in
 read-inline ctx-large inner
+
+let-inline ctx \text-Large inner =
+ let ctx-Large = 
+    ctx |> set-font-size font-size-Large
+in
+read-inline ctx-Large inner
+
+let-inline ctx \text-LARGE inner =
+ let ctx-LARGE = 
+    ctx |> set-font-size font-size-LARGE
+in
+read-inline ctx-LARGE inner
+
+let-inline ctx \text-huge inner =
+ let ctx-huge = 
+    ctx |> set-font-size font-size-huge
+in
+read-inline ctx-huge inner
 
 end
 
