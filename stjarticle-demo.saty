@@ -24,7 +24,7 @@ document (|
   +subsection{test}<
    +subsubsection{test}<
    +p{\textgt{テスト}\textmc{テスト} \text-large{テスト\text-Huge{テスト}}\text-Large{テスト}\text-LARGE{テスト}}
-   +pn{テスト\text-large{テスト}}
+   +pn{テスト\text-large{テスト}\font-size(50pt){テスト}}
      >
     > 
    >

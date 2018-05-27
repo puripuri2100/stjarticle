@@ -54,6 +54,7 @@ module StdJaBook : sig
   direct \text-LARGE : [inline-text] inline-cmd
   direct \text-huge : [inline-text] inline-cmd
   direct \text-Huge : [inline-text] inline-cmd
+  direct \font-size : [length; inline-text] inline-cmd
 
 end = struct
 
@@ -802,6 +803,12 @@ let-inline ctx \text-Huge inner =
     ctx |> set-font-size font-size-Huge
 in
 read-inline ctx-Huge inner
+
+let-inline ctx \font-size size inner = 
+    let ctx-size = 
+        ctx |> set-font-size size
+    in
+        read-inline ctx-size inner
 
 end
 

@@ -51,6 +51,7 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - `\text-LARGE`（inline-textを入れると大きさを17.28ptにして出力する。）
 - `\text-huge`（inline-textを入れると大きさを20.74ptにして出力する。）
 - `\text-Huge`（inline-textを入れると大きさを24.88ptにして出力する。）
+- `\font-size`（フォントサイズとinline-textを入れると、入力したフォントサイズの大きさにして出力する。）
 - `+p`と`+pn`のフォントサイズを`font-size-normal`になるように変更（10pt）
 
 ## 今後追加したいコマンドとか
