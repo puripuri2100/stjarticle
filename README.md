@@ -69,3 +69,7 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 
 ### 前のバージョンの`stjarticle.satyh`から削除したコマンド
 なし
+
+# version歴
+- V1(2018/5/26)
+-V1.1(2018/5/27)
