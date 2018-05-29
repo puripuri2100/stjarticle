@@ -9,9 +9,9 @@
 
 
 document (|
-  title = {テスト};
+  title = {stjarticle-demo(v1.1)};
   author = {puripuri2100};
-  date = {2018/05/12};
+  date = {2018/05/29};
   show-title = true;
   show-toc = true;
   show-footer = true;
