@@ -19,12 +19,11 @@ document (|
 %  show-title-deco = true;
 |) '<
 +part{Part}<
- +chapter{test}<
- +section{test}<
-  +subsection{test}<
-   +subsubsection{test}<
-   +p{\textgt{テスト}\textmc{テスト} \text-large{テスト\text-Huge{テスト}}\text-Large{テスト}\text-LARGE{テスト}}
-   +pn{テスト\text-large{テスト}\font-size(50pt){テスト}}
+ +chapter{Chapter}<
+ +section{Section}<
+  +subsection{SubSection}<
+   +subsubsection{SubSubSection}<
+   +p{\textgt{ゴチック体}\textmc{明朝体} \text-large{テスト\text-Huge{テスト}}\text-Large{テスト}}
      >
     > 
    >
