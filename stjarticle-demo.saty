@@ -18,7 +18,7 @@ document (|
   show-header  = false;
 %  show-title-deco = true;
 |) '<
-+part{test}<
++part{Part}<
  +chapter{test}<
  +section{test}<
   +subsection{test}<
