@@ -67,6 +67,7 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - 参考文献
 - 文全体のフォントサイズを変更するコマンド作成
 - demoの充実化
+- 行頭インデントを完全に1zwと同じ大きさにする
 ## 削除したコマンド
 ### `stdjabook.satyh`から削除したコマンド
 
