@@ -23,7 +23,7 @@ document (|
  +section{Section}<
   +subsection{SubSection}<
    +subsubsection{SubSubSection}<
-   +p{\textgt{ゴチック体}\textmc{明朝体} \text-large{テスト\text-Huge{テスト}}\text-Large{テスト}\font-size{20pt}{自由に変えられる}}
+   +p{\textgt{ゴチック体}\textmc{明朝体} \text-large{テスト\text-Huge{テスト}}\text-Large{テスト}\font-size(20pt){自由にフォントサイズを変えられる}}
      >
     > 
    >
