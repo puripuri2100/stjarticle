@@ -9,6 +9,11 @@ SATySFiの最初の*st*を、Japaneseの*j*を、そして*article*をあわせ�
 # ちょっとした説明
 SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、少し機能が足りないと感じましたので追加しました。
 
+# `stjarticle.satyh`の使い方
+コンパイルしたい`.saty`ファイルの冒頭に`@import: stjarticle`を書くだけで`stjarticle.satyh`が提供するコマンドを全て使うことができるようになります。
+
+コンパイルする時は特にこれと言った特殊な操作は必要なく、`satysfi hoge.saty`とするだけです（コンパイル時のオプションはこのパッケージに影響することはないのでご自由にどうぞ）。
+
 # コマンド説明
 
 ## 前からあったコマンドとか
