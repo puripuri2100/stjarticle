@@ -1,12 +1,5 @@
 @import: stjarticle
 %@require: stdjabook
-@require: code
-@require: itemize
-@require: tabular
-@require: proof
-@require: hdecoset
-@require: vdecoset
-
 
 document (|
   title = {stjarticle-demo(v1.1)};
