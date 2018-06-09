@@ -14,6 +14,8 @@ document (|
 +part{Part}<
  +chapter{Chapter}<
  +section{Section}<
+ +pe{吾輩は猫である。名前はまだ無い。
+　どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。}
   +subsection{SubSection}<
    +subsubsection{SubSubSection}<
    +p{\textgt{ゴチック体}\textmc{明朝体} \text-large{テスト\text-Huge{テスト}}\text-Large{テスト}\font-size(20pt){自由にフォントサイズを変えられる}}

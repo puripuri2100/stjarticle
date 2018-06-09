@@ -1,5 +1,5 @@
 % -*- coding: utf-8 -*-
-%version[1.1]
+%version[1.2]
 @require: pervasives
 @require: gr
 @require: list
@@ -37,6 +37,7 @@ module StdJaBook : sig
   direct \figure : [string?; inline-text; block-text] inline-cmd
   direct +p : [inline-text] block-cmd
   direct +pn : [inline-text] block-cmd
+  direct +pe : [inline-text] block-cmd
   direct +part : [string?; inline-text; block-text] block-cmd
   direct +chapter : [string?; inline-text; block-text] block-cmd
   direct +section : [string?; inline-text; block-text] block-cmd
@@ -441,15 +442,15 @@ let title-deco =
                     (ib-title ++ inline-fil ++ ib-page)
 
             
-            | TOCElementSection(label, title) ->
-                let it-num = embed-string (get-cross-reference-number label) in
-                let it-page = embed-string (get-cross-reference-page label) in
-                let ib-title = 
-                  inline-skip toc-section-indent
-                  ++ read-inline ctx-doc {#it-num;. #title;} ++ inline-skip 3pt in
-                let ib-page = inline-skip 3pt ++ read-inline ctx-doc it-page in
-                let ib-middle =
-                  let w = (get-text-width ctx-doc) -' (get-natural-width ib-title) -' (get-natural-width ib-page) in
+        | TOCElementSection(label, title) ->
+            let it-num = embed-string (get-cross-reference-number label) in
+            let it-page = embed-string (get-cross-reference-page label) in
+            let ib-title = 
+              inline-skip toc-section-indent
+              ++ read-inline ctx-doc {#it-num;. #title;} ++ inline-skip 3pt in
+            let ib-page = inline-skip 3pt ++ read-inline ctx-doc it-page in
+            let ib-middle =
+              let w = (get-text-width ctx-doc) -' (get-natural-width ib-title) -' (get-natural-width ib-page) in
                     if w <' 0pt then inline-fil else
                       make-dots-line ctx-doc w
                 in
@@ -558,6 +559,27 @@ let title-deco =
 
 
   let-block ctx +p inner =
+    let ib-inner = 
+        let ctx-normal = 
+        ctx |> set-font-size font-size-normal
+    in
+    read-inline ctx-normal inner in
+    let br-parag =
+        (quad-indent ctx) ++ ib-inner ++ inline-fil
+    in
+      form-paragraph ctx br-parag
+
+
+  let-block ctx +pn inner =
+    let () = needs-indentation-ref <- true in
+    let ib-inner = 
+        let ctx-normal = 
+        ctx |> set-font-size font-size-normal
+    in
+    read-inline ctx-normal inner in
+      form-paragraph ctx (ib-inner ++ inline-fil)
+
+ let-block ctx +pe inner =
     let needs-indentation =
       if !needs-indentation-ref then true else
         let () = needs-indentation-ref <- true in
@@ -575,16 +597,6 @@ let title-deco =
         ib-inner ++ inline-fil
     in
       form-paragraph ctx br-parag
-
-
-  let-block ctx +pn inner =
-    let () = needs-indentation-ref <- true in
-    let ib-inner = 
-        let ctx-normal = 
-        ctx |> set-font-size font-size-normal
-    in
-    read-inline ctx-normal inner in
-      form-paragraph ctx (ib-inner ++ inline-fil)
 
   let part-scheme ctx label title inner =
     let ctx-title = make-part-title ctx in
