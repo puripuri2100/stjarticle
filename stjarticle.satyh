@@ -37,7 +37,7 @@ module StdJaBook : sig
   direct \figure : [string?; inline-text; block-text] inline-cmd
   direct +p : [inline-text] block-cmd
   direct +pn : [inline-text] block-cmd
-  direct +pe : [inline-text] block-cmd
+  direct +ep : [inline-text] block-cmd
   direct +part : [string?; inline-text; block-text] block-cmd
   direct +chapter : [string?; inline-text; block-text] block-cmd
   direct +section : [string?; inline-text; block-text] block-cmd
@@ -579,7 +579,7 @@ let title-deco =
     read-inline ctx-normal inner in
       form-paragraph ctx (ib-inner ++ inline-fil)
 
- let-block ctx +pe inner =
+ let-block ctx +ep inner =
     let needs-indentation =
       if !needs-indentation-ref then true else
         let () = needs-indentation-ref <- true in
