@@ -36,6 +36,7 @@ module StdJaBook : sig
   direct \ref-page : [string] inline-cmd
   direct \figure : [string?; inline-text; block-text] inline-cmd
   direct +p : [inline-text] block-cmd
+  direct +pe : [inline-text] block-cmd
   direct +pn : [inline-text] block-cmd
   direct +ep : [inline-text] block-cmd
   direct +part : [string?; inline-text; block-text] block-cmd
@@ -543,8 +544,11 @@ let title-deco =
   let-mutable num-subsubsection <- 0
 
 
-  let quad-indent ctx =
-    inline-skip (get-font-size ctx)
+  let quad-indent-ja ctx =
+    inline-skip (get-font-size ctx *' 0.88)
+
+ let quad-indent-en ctx =
+    inline-skip (get-font-size ctx *' 1.0)
 
 
   let-block ctx +p inner =
@@ -554,7 +558,18 @@ let title-deco =
     in
     read-inline ctx-normal inner in
     let br-parag =
-        (quad-indent ctx) ++ ib-inner ++ inline-fil
+        (quad-indent-ja ctx) ++ ib-inner ++ inline-fil
+    in
+      form-paragraph ctx br-parag
+
+  let-block ctx +pe inner =
+    let ib-inner = 
+        let ctx-normal = 
+        ctx |> set-font-size font-size-normal
+    in
+    read-inline ctx-normal inner in
+    let br-parag =
+        (quad-indent-en ctx) ++ ib-inner ++ inline-fil
     in
       form-paragraph ctx br-parag
 
@@ -581,7 +596,7 @@ let title-deco =
     read-inline ctx-normal inner in
     let br-parag =
       if needs-indentation then
-        (quad-indent ctx) ++ ib-inner ++ inline-fil
+        (quad-indent-en ctx) ++ ib-inner ++ inline-fil
       else
         ib-inner ++ inline-fil
     in
