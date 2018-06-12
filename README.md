@@ -59,7 +59,7 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - ~~`\text-huge`（inline-textを入れると大きさを20.74ptにして出力する。）~~
 - ~~`\text-Huge`（inline-textを入れると大きさを24.88ptにして出力する。）~~
 - `\font-size`（フォントサイズとinline-textを入れると、入力したフォントサイズの大きさにして出力する。）
-- `+p`と`+pn`のフォントサイズを`font-size-normal`になるように変更（10pt）
+- `+p`と`+pn`のフォントサイズを`font-size-normal`になるように変更（~~10pt~~ V1.3以降12ptに）
 
 ### バージョン1.2以降
 - `+p`の定義変更（`+ep`に定義をそのまま移し、`+section`等の直後の`+p`の行頭インデントがなかったが、いつでも行頭インデントが入るようにした。）
