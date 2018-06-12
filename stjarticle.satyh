@@ -36,7 +36,7 @@ module StdJaBook : sig
   direct \ref-page : [string] inline-cmd
   direct \figure : [string?; inline-text; block-text] inline-cmd
   direct +p : [inline-text] block-cmd
-  direct +pe : [inline-text] block-cmd
+  direct +ph : [inline-text] block-cmd
   direct +pn : [inline-text] block-cmd
   direct +ep : [inline-text] block-cmd
   direct +part : [string?; inline-text; block-text] block-cmd
@@ -562,7 +562,7 @@ let title-deco =
     in
       form-paragraph ctx br-parag
 
-  let-block ctx +pe inner =
+  let-block ctx +ph inner =
     let ib-inner = 
         let ctx-normal = 
         ctx |> set-font-size font-size-normal
