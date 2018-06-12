@@ -2,7 +2,7 @@
 %@require: stdjabook
 
 document (|
-  title = {stjarticle-demo(v1.1)};
+  title = {stjarticle-demo(v1.3)};
   author = {puripuri2100};
   date = {2018/05/29};
   show-title = true;
