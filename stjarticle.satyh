@@ -1,5 +1,5 @@
 % -*- coding: utf-8 -*-
-%version[1.2]
+%version[1.3]
 @require: pervasives
 @require: gr
 @require: list
@@ -94,7 +94,7 @@ end = struct
       read-inline ctx it
 
 
-  let font-size-normal  = 10pt
+  let font-size-normal = 10pt
   let font-size-title   = 34pt
   let font-size-author  = 16pt
   let font-size-date = 16pt
@@ -103,17 +103,6 @@ end = struct
   let font-size-section = 18pt
   let font-size-subsection = 16pt
   let font-size-subsubsection = 14pt
-  let font-size-tiny = 5pt
-  let font-size-scriptsize = 7pt
-  let font-size-footnotesize = 8pt
-  let font-size-small = 9pt
-  let font-size-normalsize  = 10pt
-  let font-size-large = 12pt
-  let font-size-Large = 14.4pt
-  let font-size-LARGE = 17.28pt
-  let font-size-huge = 20.74pt
-  let font-size-Huge = 24.88pt
-  
 
   let section-top-margin = 20pt
   let section-bottom-margin = 12pt
@@ -755,72 +744,37 @@ let-inline ctx \textmc it =
     ctx |> set-font Kana font |> set-font HanIdeographic font
   in
   read-inline ctxm it
-  
-let-inline ctx \text-tiny inner =
- let ctx-tiny = 
-    ctx |> set-font-size font-size-tiny
-in
-read-inline ctx-tiny inner
-
-let-inline ctx \text-scriptsize inner =
- let ctx-scriptsize = 
-    ctx |> set-font-size font-size-scriptsize
-in
-read-inline ctx-scriptsize inner
-
-let-inline ctx \text-footnotesize inner =
- let ctx-footnotesize = 
-    ctx |> set-font-size font-size-footnotesize
-in
-read-inline ctx-footnotesize inner
-
-let-inline ctx \text-small inner =
- let ctx-small = 
-    ctx |> set-font-size font-size-small
-in
-read-inline ctx-small inner
-
- let-inline ctx \text-normalsize inner =
- let ctx-normalsize = 
-    ctx |> set-font-size font-size-normalsize
-in
-read-inline ctx-normalsize inner
-
- let-inline ctx \text-large inner =
- let ctx-large = 
-    ctx |> set-font-size font-size-large
-in
-read-inline ctx-large inner
-
-let-inline ctx \text-Large inner =
- let ctx-Large = 
-    ctx |> set-font-size font-size-Large
-in
-read-inline ctx-Large inner
-
-let-inline ctx \text-LARGE inner =
- let ctx-LARGE = 
-    ctx |> set-font-size font-size-LARGE
-in
-read-inline ctx-LARGE inner
-
-let-inline ctx \text-huge inner =
- let ctx-huge = 
-    ctx |> set-font-size font-size-huge
-in
-read-inline ctx-huge inner
-
-let-inline ctx \text-Huge inner =
- let ctx-Huge = 
-    ctx |> set-font-size font-size-Huge
-in
-read-inline ctx-Huge inner
 
 let-inline ctx \font-size size inner = 
     let ctx-size = 
         ctx |> set-font-size size
     in
         read-inline ctx-size inner
+
+let font-size-modify ctx scale inner =
+        let ctx-size =
+          ctx |> set-font-size (get-font-size ctx *' scale)
+        in read-inline ctx-size inner
+
+let-inline ctx \text-tiny = font-size-modify ctx .5
+
+let-inline ctx \text-scriptsize = font-size-modify ctx .7
+
+let-inline ctx \text-footnotesize = font-size-modify ctx .8
+
+let-inline ctx \text-small = font-size-modify ctx .9
+
+let-inline ctx \text-normalsize = font-size-modify ctx 1.
+
+let-inline ctx \text-large = font-size-modify ctx 1.2
+
+let-inline ctx \text-Large = font-size-modify ctx 1.44
+
+let-inline ctx \text-LARGE = font-size-modify ctx 1.728
+
+let-inline ctx \text-huge = font-size-modify ctx 2.074
+
+let-inline ctx \text-Huge = font-size-modify ctx 2.488
 
 end
 
