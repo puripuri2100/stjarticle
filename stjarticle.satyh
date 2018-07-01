@@ -10,7 +10,7 @@
 @require: code
 
 
-module stjarticle : sig
+module Stjarticle : sig
 
   val document : 'a -> block-text -> document
     constraint 'a :: (|
@@ -795,5 +795,5 @@ let-inline ctx \text-Huge = font-size-modify ctx 2.488
 end
 
 
-let document = stjarticle.document
+let document = Stjarticle.document
   % ad-hoc
