@@ -10,13 +10,14 @@
 @require: code
 
 
-module StdJaBook : sig
+module stjarticle : sig
 
   val document : 'a -> block-text -> document
     constraint 'a :: (|
       title : inline-text;
       author : inline-text;
       date : inline-text;
+%      normal-font-size : length;
       show-toc : bool;
       show-title : bool;
       show-footer : bool;
@@ -95,7 +96,7 @@ end = struct
       read-inline ctx it
 
 
-  let font-size-normal = 12pt
+  let font-size-normal = 12pt%record#normal-font-size
   let font-size-title   = 34pt
   let font-size-author  = 16pt
   let font-size-date = 16pt
@@ -794,5 +795,5 @@ let-inline ctx \text-Huge = font-size-modify ctx 2.488
 end
 
 
-let document = StdJaBook.document
+let document = stjarticle.document
   % ad-hoc
