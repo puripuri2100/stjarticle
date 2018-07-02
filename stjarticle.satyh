@@ -58,6 +58,7 @@ module Stjarticle : sig
   direct \text-huge : [inline-text] inline-cmd
   direct \text-Huge : [inline-text] inline-cmd
   direct \font-size : [length; inline-text] inline-cmd
+  direct \font-size-modify : [float; inline-text] inline-cmd
 
 end = struct
 
@@ -791,6 +792,12 @@ let-inline ctx \text-LARGE = font-size-modify ctx 1.728
 let-inline ctx \text-huge = font-size-modify ctx 2.074
 
 let-inline ctx \text-Huge = font-size-modify ctx 2.488
+
+let-inline ctx \font-size-modify scale inner = 
+    let ctx-size-modify = 
+        ctx |> set-font-size (get-font-size ctx *' scale)
+    in
+        read-inline ctx-size-modify inner
 
 end
 

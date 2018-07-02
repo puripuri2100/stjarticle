@@ -2,9 +2,9 @@
 %@require: stdjabook
 
 document (|
-  title = {stjarticle-demo(v1.3)};
+  title = {stjarticle-demo(v1.3.1)};
   author = {puripuri2100};
-  date = {2018/05/29};
+  date = {2018/07/03};
 %  normal-font-size = 12pt;
   show-title = true;
   show-toc = true;
@@ -22,7 +22,7 @@ document (|
  +ph{6月のときである。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。}
   +subsection{SubSection}<
    +subsubsection{SubSubSection}<
-   +p{\textgt{ゴチック体}\textmc{明朝体} \text-large{テスト\text-Huge{テスト}}\text-Large{テスト}\font-size(20pt){自由にフォントサイズを変えられる}}
+   +p{\textgt{ゴチック体}\textmc{明朝体} \text-large{テスト\text-Huge{テスト}}\text-Large{テスト}\font-size(20pt){自由にフォントサイズを変えられる}\font-size-modify(1.2){スケールでも変えられる}}
      >
     > 
    >
