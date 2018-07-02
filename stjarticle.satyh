@@ -384,9 +384,9 @@ let title-deco =
 
     % -- table of contents --
     let toc-part-indent = 0pt in
-    let toc-chapter-indent = 5pt in
-    let toc-section-indent = 15pt in
-    let toc-subsection-indent = 20pt in
+    let toc-chapter-indent = 0pt in
+    let toc-section-indent = 13.5pt in
+    let toc-subsection-indent = 13.5pt in
     let bb-toc =
       if not record#show-toc then
         block-nil
@@ -432,7 +432,7 @@ let title-deco =
                   bbacc +++ line-break true true ctx-doc
                     (ib-title ++ inline-fil ++ ib-page)
 
-            
+
         | TOCElementSection(label, title) ->
             let it-num = embed-string (get-cross-reference-number label) in
             let it-page = embed-string (get-cross-reference-page label) in
