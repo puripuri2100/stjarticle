@@ -1,5 +1,13 @@
 % -*- coding: utf-8 -*-
 %version[1.3.2]
+%Repository:https://github.com/puripuri2100/stjarticle
+%This file's license is "MIT LICENSE"
+%lnc. | https://github.com/puripuri2100/stjarticle/blob/master/LICENSE
+%
+%
+%https://github.com/gfngfn/SATySFi
+
+
 @require: pervasives
 @require: gr
 @require: list
