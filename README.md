@@ -85,6 +85,10 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 #### バージョン1.3.1以降
 - 目次周り変更
 - `\font-size-modify` （フォントサイズを倍率で変えられるようにした。）
+
+### バージョン1.3.2以降
+[Twitterでgfn氏に聞いている人が居た](https://twitter.com/wraikny_/status/1014032946389372928)ので右上にauthorを表示するようにした（偶数ページでは左上）。
+
 ## 今後追加したいコマンドとか
 - `show-title-deco`（最初のdocumentの部分で、title-decoを表示するか否かを選択できるようにしたい。）
 - titleがあるページにはheaderが無いようにする
@@ -109,3 +113,4 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - V1.2(2018/6/9)
 - V1.3(2018/6/12)
 - V1.3.1(2018/7/3)
+- V1.3.2(2018/7/3)

@@ -492,9 +492,9 @@ let title-deco =
         in
         let ib-text =
          if pageno mod 2 == 0 then
-           (inline-fil ++ read-inline ctx title)
+           (read-inline ctx author++ inline-fil ++ read-inline ctx title)
          else
-           (read-inline ctx title ++ inline-fil)
+           (read-inline ctx title ++ inline-fil ++ read-inline ctx author)
        in
 %       let () = display-message `insert` in
        let (bb-float-boxes, acc) =

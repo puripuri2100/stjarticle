@@ -2,14 +2,14 @@
 %@require: stdjabook
 
 document (|
-  title = {stjarticle-demo(v1.3.1)};
+  title = {stjarticle-demo(v1.3.2)};
   author = {puripuri2100};
   date = {2018/07/03};
 %  normal-font-size = 12pt;
   show-title = true;
   show-toc = true;
   show-footer = true;
-  show-header  = false;
+  show-header  = true;
 %  show-title-deco = true;
 |) '<
 +part{Part}<
