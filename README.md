@@ -120,4 +120,4 @@ SATySFi :
 https://github.com/gfngfn/SATySFi
 
 Author : 
-T. Suwa
+(C) Naoki Kaneko and T. Suwa 2018
