@@ -116,8 +116,8 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - V1.3.2(2018/7/3)
 
 # LICENSE
-SATySFi:
+SATySFi : 
 https://github.com/gfngfn/SATySFi
 
-This package's license is "MIT LICENSE".
-lnc. | https://github.com/puripuri2100/stjarticle/blob/master/LICENSE
+Author : 
+T. Suwa
