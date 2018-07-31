@@ -3,9 +3,6 @@
 `stjarticle.satyh` is [SATySFi](https://github.com/gfngfn/SATySFi)'s package.
 `stjarticle-demo.saty` is `stjarticle.satyh`'s demo file.
 
-# 名前の由来
-SATySFiの最初の*st*を、Japaneseの*j*を、そして*article*をあわせて*stjarticle*です。
-
 # ちょっとした説明
 SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、少し機能が足りないと感じましたので追加しました。
 
