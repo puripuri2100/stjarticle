@@ -10,7 +10,7 @@ document (|
   show-toc = true;
   show-footer = true;
   show-header  = true;
-%  show-title-deco = true;
+  show-title-deco = true;
 |) '<
 +part{Part}<
  +chapter{Chapter}<
