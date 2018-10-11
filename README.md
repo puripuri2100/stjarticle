@@ -38,6 +38,7 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - `date`（inline-textです。最初のdocumentの部分で指定します。名前の通り、文書の作成日付を書きます。）
 - `show-fotter`（trueかfalseを指定します。最初のdocumentの部分で指定します。フッターを表示するか否かを選択します。）
 - `show-header`（trueかfalseを指定します。最初のdocumentの部分で指定します。ヘッダーを表示するか否かを選択します。）
+- `show-title-deco`（trueかfalseを指定します。最初のdocumentの部分で指定します。title-decoを表示するか否かを選択します。）
 - `+part`（部です。）
 - `+chapter`（章です。）
 - `+subsubsection`（小々節ですが、目次には表示されません。）
@@ -87,7 +88,6 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 [Twitterでgfn氏に聞いている人が居た](https://twitter.com/wraikny_/status/1014032946389372928)ので右上にauthorを表示するようにした（偶数ページでは左上）。
 
 ## 今後追加したいコマンドとか
-- `show-title-deco`（最初のdocumentの部分で、title-decoを表示するか否かを選択できるようにしたい。）
 - titleがあるページにはheaderが無いようにする
 - 目次部分のデザイン変更
 - 右寄せ・左寄せ・センタリング

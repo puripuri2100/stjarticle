@@ -29,7 +29,7 @@ module Stjarticle : sig
       show-title : bool;
       show-footer : bool;
       show-header : bool;
-%      show-title-deco : bool;
+      show-title-deco : bool;
     |)
 
   val font-latin-roman  : string * float * float
@@ -235,9 +235,13 @@ let title-deco =
       (deco, deco, deco, deco)
 
 
-  let-block ctx +make-title it-title it-author it-date =
+  let-block ctx +make-title it-title it-author it-date record =
     let pads = (20pt, 20pt, 10pt, 10pt) in
-    block-frame-breakable ctx pads title-deco (fun ctx -> (
+    let nodeco (_, _) _ _ _ = [] in
+    let deco = if record#show-title-deco
+      then title-deco
+      else (nodeco, nodeco, nodeco, nodeco) in
+    block-frame-breakable ctx pads deco (fun ctx -> (
       let ctx-title =
         ctx |> set-font-size font-size-title
             |> set-font Latin font-latin-roman
@@ -382,7 +386,7 @@ let title-deco =
     % -- title --
     let bb-title =
       if record#show-title then
-        read-block ctx-doc '<+make-title(title)(author)(date);>
+        read-block ctx-doc '<+make-title(title)(author)(date)(record);>
       else
         block-nil
     in
