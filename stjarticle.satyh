@@ -24,7 +24,7 @@ module Stjarticle : sig
       title : inline-text;
       author : inline-text;
       date : inline-text;
-%      normal-font-size : length;
+      normal-font-size : length;
       show-toc : bool;
       show-title : bool;
       show-footer : bool;
@@ -104,7 +104,7 @@ end = struct
       read-inline ctx it
 
 
-  let font-size-normal = 12pt%record#normal-font-size
+  let-mutable font-size-normal-ref <-  0pt
   let font-size-title   = 34pt
   let font-size-author  = 16pt
   let font-size-date = 16pt
@@ -368,6 +368,7 @@ let title-deco =
 
   let document record inner =
     % -- constants --
+    let () = font-size-normal-ref <- record#normal-font-size in
     let title = record#title in
     let author = record#author in
     let date = record#date in
@@ -567,7 +568,7 @@ let title-deco =
   let-block ctx +p inner =
     let ib-inner = 
         let ctx-normal = 
-        ctx |> set-font-size font-size-normal
+        ctx |> set-font-size !font-size-normal-ref
     in
     read-inline ctx-normal inner in
     let br-parag =
@@ -578,7 +579,7 @@ let title-deco =
   let-block ctx +ph inner =
     let ib-inner = 
         let ctx-normal = 
-        ctx |> set-font-size font-size-normal
+        ctx |> set-font-size !font-size-normal-ref
     in
     read-inline ctx-normal inner in
     let br-parag =
@@ -591,7 +592,7 @@ let title-deco =
     let () = needs-indentation-ref <- true in
     let ib-inner = 
         let ctx-normal = 
-        ctx |> set-font-size font-size-normal
+        ctx |> set-font-size !font-size-normal-ref
     in
     read-inline ctx-normal inner in
       form-paragraph ctx (ib-inner ++ inline-fil)
@@ -604,7 +605,7 @@ let title-deco =
     in
     let ib-inner = 
         let ctx-normal = 
-        ctx |> set-font-size font-size-normal
+        ctx |> set-font-size !font-size-normal-ref
     in
     read-inline ctx-normal inner in
     let br-parag =
