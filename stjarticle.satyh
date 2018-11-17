@@ -7,14 +7,10 @@
 %Author:
 %(C) Naoki Kaneko and T. Suwa 2018
 
-@require: pervasives
 @require: gr
 @require: list
 @require: math
 @require: color
-@require: hdecoset
-@require: vdecoset
-@require: code
 
 
 module Stjarticle : sig
@@ -52,6 +48,10 @@ module Stjarticle : sig
   direct +section : [string?; inline-text; block-text] block-cmd
   direct +subsection : [string?; inline-text; block-text] block-cmd
   direct +subsubsection : [string?;inline-text;block-text]block-cmd
+  direct \textrm : [inline-text] inline-cmd
+  direct \textbf : [inline-text] inline-cmd
+  direct \textit : [inline-text] inline-cmd
+  direct \textsf : [inline-text] inline-cmd
   direct \textgt : [inline-text] inline-cmd
   direct \textmc : [inline-text] inline-cmd
   direct \text-tiny : [inline-text] inline-cmd
@@ -760,19 +760,47 @@ let title-deco =
     in
       subsubsection-scheme ctx label title inner
 
-let-inline ctx \textgt it =
-  let font = (`ipaexg`, 0.88, 0.) in
-  let ctxg =
-    ctx |> set-font Kana font |> set-font HanIdeographic font
-  in
-  read-inline ctxg it
+let-inline ctx \textrm it =
+    let ctxrm =
+        ctx |> set-latin-font font-latin-roman
+            |> set-cjk-font font-cjk-mincho
+    in
+read-inline ctxrm it
+
+let-inline ctx \textbf it =
+    let ctxbf =
+        ctx |> set-latin-font font-latin-bold
+            |> set-cjk-font font-cjk-gothic
+    in
+read-inline ctxbf it
+
+let-inline ctx \textit it =
+    let ctxit =
+        ctx |> set-latin-font font-latin-italic
+            |> set-cjk-font font-cjk-mincho
+in
+read-inline ctxit it
+
+let-inline ctx \textsf it =
+    let ctxsf =
+        ctx |> set-latin-font font-latin-sans
+            |> set-cjk-font font-cjk-gothic
+    in
+read-inline ctxsf it
 
 let-inline ctx \textmc it =
-  let font = (`ipaexm`, 0.88, 0.) in
-  let ctxm =
-    ctx |> set-font Kana font |> set-font HanIdeographic font
-  in
-  read-inline ctxm it
+    let ctxmc =
+        ctx |> set-latin-font font-latin-roman
+            |> set-cjk-font font-cjk-mincho
+    in
+read-inline ctxmc it
+
+let-inline ctx \textgt it =
+    let ctxgt =
+        ctx |> set-latin-font font-latin-bold
+            |> set-cjk-font font-cjk-gothic
+    in
+read-inline ctxgt it
 
 let-inline ctx \font-size size inner = 
     let ctx-size = 
