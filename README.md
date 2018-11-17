@@ -94,12 +94,10 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - \textsf
 
 ## 今後追加したいコマンドとか
-- titleがあるページにはheaderが無いようにする
 - 目次部分のデザイン変更
 - 右寄せ・左寄せ・センタリング
 - 参考文献
 - demoの充実化
-- 行頭インデントを完全に1zwと同じ大きさにする
 ## 削除したコマンド
 
 ### `stdjabook.satyh`から削除したコマンド
