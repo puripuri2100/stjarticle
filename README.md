@@ -88,6 +88,10 @@ SATySFiには最初から`stdja.satyh`と`stdjabook.satyh`がありますが、�
 - [Twitterでgfn氏に聞いている人が居た](https://twitter.com/wraikny_/status/1014032946389372928)ので右上にauthorを表示するようにした（偶数ページでは左上）。
 - [shot-title-decoを実装](https://github.com/puripuri2100/stjarticle/pull/1)を実装というプルリクエストを取り入れる
 - documentのレコード型に`normal-font-size`を追加　lengthを入れてください
+- \textrm
+- \textbf
+- \textit
+- \textsf
 
 ## 今後追加したいコマンドとか
 - titleがあるページにはheaderが無いようにする
