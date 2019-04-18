@@ -1,2 +1,0 @@
-all:
-	satysfi stjarticle-demo.saty
