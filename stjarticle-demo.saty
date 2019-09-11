@@ -1,4 +1,4 @@
-@import: stjarticle
+@require: class-stjarticle/stjarticle
 %@require: stdjabook
 
 document (|
